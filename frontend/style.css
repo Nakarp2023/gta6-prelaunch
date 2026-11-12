@@ -47,3 +47,27 @@ body[data-screen="world"] #places .section-head,body[data-screen="gallery"] #gal
 }
 @media(max-width:390px){.hero{min-height:600px}.hero h1{font-size:clamp(45px,12vw,60px)}.hero-content{padding:34px 15px}.hero-index span{font-size:6px}.timer strong{font-size:24px}}
 @media(orientation:landscape) and (max-height:500px){.hero{min-height:430px}.hero-content{padding:24px 5% 28px;max-width:620px}.hero h1{font-size:clamp(42px,8vw,70px);margin:12px 0}.hero .lead{font-size:11px}.hero-pills{margin:9px 0}.timer{margin:8px 0 12px}.timer strong{font-size:24px}.hero-index{bottom:12px}.hero-caption{bottom:12px}}
+
+/* Refined menu and navigation icon system */
+.tile-icon{width:66px;height:66px;right:18px;top:16px;stroke-width:1.35;opacity:.92;filter:drop-shadow(0 2px 12px #0009) drop-shadow(0 0 10px #62f5ff33)}
+.tile{padding:24px}.tile>div{max-width:100%}.tile h3{max-width:100%;overflow-wrap:anywhere}
+.bottom-nav{align-items:center;padding:7px 8px;gap:3px}
+.nav-item{position:relative;flex:1;min-width:0;height:54px;padding:5px 3px;gap:3px;border-radius:12px;color:#a9a3b2;font-size:0;transition:color .25s,background .25s,transform .25s}
+.nav-item svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;display:block;filter:drop-shadow(0 0 7px #62f5ff12)}
+.nav-item small{font-size:9px;letter-spacing:.01em;line-height:1.1}
+.nav-item.active{background:linear-gradient(180deg,#ff3e9d1c,#62f5ff08);color:#ff8bc5;box-shadow:inset 0 0 0 1px #ff3e9d25!important}
+.nav-item.active svg{stroke:#ff8bc5;filter:drop-shadow(0 0 7px #ff3e9d55)}
+.nav-item:hover{transform:translateY(-2px);background:#ffffff08}
+@media(max-width:700px){
+.tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.tile{min-height:205px;padding:16px}
+.tile-gallery{grid-column:1/-1;min-height:165px}
+.tile-icon{width:48px;height:48px;right:13px;top:12px}
+.tile h3{font-size:clamp(25px,7vw,31px)}
+.tile p{max-width:230px}
+.bottom-nav{width:calc(100% - 18px);padding:6px 5px;border-radius:17px}
+.nav-item{height:51px;border-radius:11px}
+.nav-item svg{width:22px;height:22px}
+.nav-item small{font-size:8px}
+}
+@media(max-width:370px){.tile{min-height:180px;padding:13px}.tile-gallery{min-height:150px}.tile-icon{width:42px;height:42px}.tile h3{font-size:24px}.nav-item small{font-size:7px}}
