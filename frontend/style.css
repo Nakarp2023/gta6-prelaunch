@@ -221,3 +221,11 @@ body{background:#07080b}
 .club-footnote>span{color:#ffffff75;font-size:16px}.club-footnote p{font-size:10px;line-height:1.6;color:#ffffff55;margin:0}
 @media(max-width:700px){.club-section{padding:40px 16px 70px}.club-hero{min-height:230px;padding:25px}.club-hero h2{font-size:clamp(52px,15vw,85px)}.club-hero p{font-size:11px;max-width:220px}.club-mark{font-size:70px;right:20px;bottom:15px}.club-heading{margin:30px 0 15px}.club-grid{gap:9px}.club-art{height:145px}.club-card-copy{padding:13px}.club-card h4{font-size:21px}.club-card p{font-size:10px;min-height:56px;margin-bottom:12px}.club-action{padding:10px;font-size:9px}.club-label{font-size:7px;left:10px;top:11px}}
 @media(max-width:370px){.club-grid{grid-template-columns:1fr}.club-art{height:180px}.club-card p{min-height:0}}
+
+.club-extra-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.club-extra{display:flex;align-items:flex-start;gap:15px;padding:20px;border:1px solid #ffffff13;background:#ffffff03;min-width:0}
+.extra-icon{display:grid;place-items:center;flex:0 0 42px;height:42px;border:1px solid #ffffff20;color:#ffffff9b;font-size:18px}
+.club-extra>div{flex:1;min-width:0}.club-extra h4{font:700 20px var(--font-display);color:#fff;margin:5px 0 6px}.club-extra p{font-size:11px;line-height:1.65;color:#a4a4af;margin:0}
+.extra-state{font:600 8px var(--font-body);letter-spacing:.08em;color:#ffffff55;white-space:nowrap;padding-top:4px}
+.club-heading-extra{margin-top:42px}
+@media(max-width:700px){.club-extra-grid{grid-template-columns:1fr;gap:8px}.club-extra{padding:14px;gap:12px}.extra-icon{flex-basis:36px;height:36px}.club-extra h4{font-size:18px}.extra-state{font-size:7px}}
