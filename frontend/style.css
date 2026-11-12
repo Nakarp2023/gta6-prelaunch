@@ -137,3 +137,56 @@ body[data-screen="world"] #places .section-head,body[data-screen="gallery"] #gal
 .gallery-note{color:#ffffff55;font-size:10px;line-height:1.7;margin-top:18px}
 .video-modal{position:fixed;inset:0;z-index:1200;display:none;align-items:center;justify-content:center;flex-direction:column;padding:24px;background:#030407f2;backdrop-filter:blur(18px)}.video-modal.open{display:flex}.video-close{position:absolute;right:22px;top:18px;width:44px;height:44px;border:1px solid #ffffff30;border-radius:50%;background:#ffffff0b;color:#fff;font-size:28px;cursor:pointer}.video-frame{width:min(1100px,100%);aspect-ratio:16/9;border:1px solid #ffffff25;border-radius:10px;overflow:hidden;background:#000;box-shadow:0 30px 100px #000}.video-frame iframe{width:100%;height:100%;border:0}.video-modal>p{font:600 10px var(--font-body);letter-spacing:.2em;color:#ffffff75;margin-top:16px}
 @media(max-width:700px){.gallery-intro h2{font-size:38px}.gallery-intro p{font-size:12px}.trailer-play{aspect-ratio:4/3;border-radius:10px}.trailer-badge{top:13px;left:14px;font-size:8px}.trailer-caption{left:14px;bottom:14px}.play-circle{width:54px;height:54px;font-size:18px}.gallery-toolbar h3{font-size:23px}.gallery-grid{gap:8px}.art-card span{font-size:8px;padding:10px 8px}.video-modal{padding:12px}.video-close{right:12px;top:12px}}
+
+/* Mockup fidelity pass — calm, cinematic hierarchy */
+:root{scroll-behavior:smooth}
+body{background:#07080b}
+.topbar{max-width:1440px;margin:0 auto;padding-inline:clamp(18px,4vw,56px)}
+.hero{margin:0 clamp(12px,2.4vw,34px);min-height:min(76vh,780px);border:0;border-radius:3px;overflow:hidden;box-shadow:none}
+.hero-backdrop{background-position:center 38%;transform:scale(1.015)}
+.hero-shade{background:linear-gradient(90deg,#05060bd9 0%,#05060b65 38%,transparent 76%),linear-gradient(0deg,#05060bd9 0%,transparent 48%,#05060b20 100%)}
+.hero-content{padding-left:clamp(24px,6vw,92px);max-width:900px}
+.hero-title{font-size:clamp(100px,18vw,230px)!important;letter-spacing:-.075em!important}
+.hero-location{margin:22px 0 30px;letter-spacing:.3em}
+.official-link{margin-top:0;background:#ffffff08;border-color:#ffffff38;border-radius:3px}
+.countdown-section{padding:18px 20px 52px}
+.countdown-section .timer{max-width:430px}
+.section-head,.tiles,.feature-section,.places-section,.gallery-section,.profile,.news{max-width:1320px;margin-left:auto;margin-right:auto}
+.section-head{padding-inline:clamp(18px,4vw,52px)}
+.tiles{padding-inline:clamp(18px,4vw,52px)}
+.feature-section,.places-section,.gallery-section,.profile,.news{padding-inline:clamp(18px,4vw,52px)}
+.gallery-section{padding-top:70px;padding-bottom:80px}
+.gallery-intro{margin-bottom:34px}
+.gallery-intro h2{font-size:clamp(42px,8vw,88px);letter-spacing:-.06em}
+.gallery-intro p{display:none}
+.trailer-feature{margin-bottom:52px}
+.trailer-play{aspect-ratio:2.05;border-radius:3px;border:0}
+.trailer-play img{filter:saturate(.82)}
+.trailer-shade{background:linear-gradient(90deg,#05060b88,transparent 75%),linear-gradient(0deg,#05060b95,transparent 65%)}
+.trailer-badge{top:24px;left:26px}
+.play-circle{width:72px;height:72px;border-color:#ffffff85;background:#ffffff12}
+.trailer-caption{left:26px;bottom:26px}
+.trailer-caption b{font-size:clamp(24px,4vw,48px);letter-spacing:-.02em}
+.trailer-caption small{display:none}
+.trailer-external{margin-top:15px;font-size:10px;letter-spacing:.08em}
+.gallery-toolbar{margin-bottom:20px}
+.gallery-toolbar h3{font-size:clamp(26px,4vw,38px)}
+.gallery-grid{gap:14px}
+.art-card{border:0;border-radius:2px;background:transparent;text-align:left}
+.art-card img{aspect-ratio:16/10;object-fit:cover}
+.art-card span{position:static;display:block;background:transparent;padding:12px 0 0;color:#ffffff8c;font-size:9px;letter-spacing:.16em}
+.art-card:hover span{color:#fff}
+.gallery-note{margin-top:22px}
+@media(max-width:700px){
+.hero{margin:0 9px;min-height:540px}
+.hero-content{padding:58px 20px 34px}
+.hero-title{font-size:clamp(78px,22vw,128px)!important}
+.countdown-section{padding:12px 16px 35px}
+.gallery-section{padding-top:42px;padding-bottom:55px}
+.trailer-play{aspect-ratio:4/3}
+.trailer-badge{top:14px;left:15px}
+.trailer-caption{left:15px;bottom:15px}
+.play-circle{width:56px;height:56px}
+.gallery-grid{gap:9px}
+.art-card span{padding-top:8px;font-size:8px}
+}
