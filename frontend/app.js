@@ -39,3 +39,6 @@ document.getElementById("go-countdown")?.addEventListener("click",()=>{switchScr
 
 // Hero preorder button opens the in-app catalogue (not an external Rockstar link)
 document.querySelectorAll('[data-preorder-open]').forEach(btn=>btn.addEventListener('click',()=>{const p=document.querySelector('#preorder-page')||document.querySelector('#preorder');p?.classList.add('active');p?.scrollIntoView({behavior:'smooth',block:'start'});document.body.dataset.screen='preorder'}));
+
+// Override initial hero modal action: prioritize the dedicated catalogue view
+ document.querySelectorAll('[data-preorder-open]').forEach(btn=>btn.addEventListener('click',()=>{const m=document.querySelector('#preorder-modal');m?.classList.remove('open');m?.setAttribute('aria-hidden','true')}));
