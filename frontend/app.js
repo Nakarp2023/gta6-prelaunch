@@ -52,3 +52,8 @@ document.getElementById("go-countdown")?.addEventListener("click",()=>{switchScr
  page.querySelectorAll('[data-pre-tab]').forEach(b=>b.addEventListener('click',()=>{page.querySelectorAll('[data-pre-tab]').forEach(x=>x.classList.toggle('active',x===b));const c=page.querySelector('#preorder-content');const t=b.dataset.preTab;if(t==='editions'){c.style.display='grid';c.querySelectorAll('.edition-card,.edition-comparison,.preorder-bonus').forEach(x=>x.hidden=false);}else{c.style.display='grid';c.querySelectorAll('.edition-card,.edition-comparison,.preorder-bonus').forEach(x=>x.hidden=true);let box=c.querySelector('.tab-info');if(!box){box=document.createElement('div');box.className='preorder-bonus tab-info';c.append(box);}box.hidden=false;box.innerHTML=t==='bonuses'?'<h3>Vintage Vice City Pack</h3><p>Бонусный набор и его состав требуют официального подтверждения.</p>':t==='details'?'<h3>Grand Theft Auto VI</h3><p>Релиз: 19 ноября 2026 · PlayStation 5 и Xbox Series X|S.</p>':'<h3>FAQ</h3><p>Leonida Hub не принимает платежи. Официальные условия предзаказа зависят от платформы и продавца.</p>';}}));
  refresh();
 })();
+
+/* Keep fixed order bar away from countdown and preorder accordions */
+(()=>{const bar=document.querySelector('#global-order-cta'),hero=document.querySelector('.hero');if(!bar||!hero)return;
+const update=()=>{const preorder=document.querySelector('#preorder')?.classList.contains('active');const topHome=document.body.dataset.screen==='home'&&window.scrollY<(hero.offsetHeight+180);bar.classList.toggle('cta-hidden',!!preorder||topHome);};
+window.addEventListener('scroll',update,{passive:true});new MutationObserver(update).observe(document.body,{attributes:true,attributeFilter:['data-screen']});update();})();
