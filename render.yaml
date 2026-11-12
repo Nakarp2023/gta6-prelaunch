@@ -1,5 +1,5 @@
 services:
-  - type: static
+  - type: staticSite
     name: gta6-miniapp
     rootDir: frontend
     buildCommand: ""
