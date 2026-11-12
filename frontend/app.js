@@ -16,7 +16,7 @@ cards.forEach((card,i)=>card.addEventListener("click",()=>openArt(i)));document.
 favBtn.onclick=()=>{const art=currentArt();favorites=favorites.includes(art)?favorites.filter(x=>x!==art):[...favorites,art];localStorage.setItem(favKey,JSON.stringify(favorites));syncFavorite();updateFavCount();};
 document.addEventListener("keydown",e=>{if(!lightbox.classList.contains("open"))return;if(e.key==="Escape")closeArt();if(e.key==="ArrowLeft")showArt(activeIndex-1);if(e.key==="ArrowRight")showArt(activeIndex+1);});
 let touchX=0;lightbox.addEventListener("touchstart",e=>touchX=e.changedTouches[0].screenX,{passive:true});lightbox.addEventListener("touchend",e=>{const dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>55)showArt(activeIndex+(dx<0?1:-1));},{passive:true});
-function switchScreen(name){if(!["home","world","gallery","news","profile"].includes(name))name="home";document.body.dataset.screen=name;document.querySelectorAll(".nav-item").forEach(n=>n.classList.toggle("active",n.dataset.go===name));window.scrollTo({top:0,behavior:"smooth"});}
+function switchScreen(name){if(!["home","world","gallery","club","news","profile"].includes(name))name="home";document.body.dataset.screen=name;document.querySelectorAll(".nav-item").forEach(n=>n.classList.toggle("active",n.dataset.go===name));window.scrollTo({top:0,behavior:"smooth"});}
 document.querySelectorAll(".nav-item").forEach(btn=>btn.addEventListener("click",()=>switchScreen(btn.dataset.go)));
 document.querySelectorAll('a[href="#places"]').forEach(a=>a.addEventListener("click",e=>{e.preventDefault();switchScreen("world");}));
 document.querySelectorAll('a[href="#gallery"]').forEach(a=>a.addEventListener("click",e=>{e.preventDefault();switchScreen("gallery");}));
@@ -24,3 +24,5 @@ document.querySelectorAll('a[href="#characters"]').forEach(a=>a.addEventListener
 switchScreen("home");
 const navItems=[...document.querySelectorAll(".nav-item")],targets=[];
 if("IntersectionObserver"in window){const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in-view");reveal.unobserve(e.target);}}),{threshold:.12});document.querySelectorAll(".section-head,.tiles,.feature-section,.places-section,.gallery-section,.profile,.news").forEach(el=>reveal.observe(el));const spy=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){const id=e.target.id;navItems.forEach(n=>n.classList.toggle("active",n.dataset.go===id||(id==="places"&&n.dataset.go==="world")||(id==="characters"&&n.dataset.go==="world")));}}),{rootMargin:"-35% 0px -55% 0px"});targets.forEach(t=>spy.observe(t));}
+
+document.querySelectorAll(".club-action").forEach(btn=>btn.addEventListener("click",()=>{const feature=btn.dataset.feature||"Функция";btn.textContent="Скоро будет доступно";btn.setAttribute("aria-label",feature+" — скоро будет доступно");}));
