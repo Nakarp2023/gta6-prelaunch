@@ -71,3 +71,38 @@ body[data-screen="world"] #places .section-head,body[data-screen="gallery"] #gal
 .nav-item small{font-size:8px}
 }
 @media(max-width:370px){.tile{min-height:180px;padding:13px}.tile-gallery{min-height:150px}.tile-icon{width:42px;height:42px}.tile h3{font-size:24px}.nav-item small{font-size:7px}}
+
+/* Premium minimal GTA VI landing */
+.topbar{height:64px;margin-bottom:10px;border:0}
+.brand{font-family:var(--font-display);font-size:30px;letter-spacing:.035em;font-weight:900;color:#fff;text-shadow:0 2px 22px #0008}
+.brand span{color:#fff;margin-left:5px;opacity:.72}
+.hero{min-height:700px;border:1px solid #ffffff18;box-shadow:0 30px 100px #0007}
+.hero-shade{background:linear-gradient(90deg,#05060bd9 0%,#05060b70 45%,#05060b08 100%),linear-gradient(0deg,#05060be8 0%,transparent 42%,#05060b35 100%)}
+.hero-content{padding:95px 7% 55px;max-width:760px}
+.hero-title{display:flex;align-items:baseline;gap:.12em;margin:0 0 8px!important;font-family:var(--font-display);font-size:clamp(100px,17vw,190px)!important;line-height:.78!important;letter-spacing:-.065em!important;font-weight:900}
+.gta-word{color:#fff;text-shadow:0 4px 35px #0007}
+.vi-word{font-size:.72em;color:#fff;text-shadow:0 0 30px #ffffff35;letter-spacing:-.06em}
+.hero-location{font:600 12px var(--font-body);letter-spacing:.34em;color:#ffffffd9;margin:24px 0 42px}
+.hero-location i{font-style:normal;color:#ffffff70;padding:0 8px}
+.release{margin:0 0 12px;gap:12px;color:#ffffff9a;font-size:9px;letter-spacing:.2em}
+.release strong{font-size:12px;color:#fff;letter-spacing:.13em}
+.timer{position:relative;max-width:460px;gap:8px;margin:14px 0 28px;padding:7px;border:1px solid #ffffff38;border-radius:15px;background:linear-gradient(135deg,#ffffff0c,#ffffff02);box-shadow:0 0 8px #ffffff12,inset 0 0 12px #ffffff08,0 0 32px #d9faff12;backdrop-filter:blur(14px)}
+.timer:before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(120deg,#ffffffaa,#ffffff18 35%,#c8faff80 65%,#ffffff35);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.65}
+.timer div{background:transparent;border:0;border-radius:9px;padding:13px 8px;box-shadow:none;backdrop-filter:none}
+.timer div:hover{background:#ffffff0a;transform:translateY(-1px)}
+.timer strong{font:500 38px var(--font-display);letter-spacing:.02em;color:#fff;text-shadow:0 0 18px #ffffff45}
+.timer small{color:#ffffff85;font-size:8px;letter-spacing:.18em}
+.primary{background:#fff;color:#08090d;border-radius:5px;padding:13px 18px;font:700 12px var(--font-body);letter-spacing:.13em;box-shadow:0 5px 30px #0003;gap:18px}
+.primary:hover{background:#eafcff;box-shadow:0 0 25px #ffffff25;transform:translateY(-2px)}
+.primary span{font-size:15px}
+@media(max-width:700px){
+.topbar{height:56px;margin-bottom:8px}.brand{font-size:26px}
+.hero{min-height:590px}.hero-content{padding:70px 20px 38px}
+.hero-title{font-size:clamp(78px,22vw,128px)!important;gap:.08em}
+.hero-location{font-size:9px;letter-spacing:.24em;margin:18px 0 30px}
+.release{font-size:8px;margin-bottom:8px}.release strong{font-size:10px}
+.timer{max-width:100%;gap:3px;padding:5px;margin:12px 0 22px;border-radius:12px}
+.timer div{padding:11px 3px}.timer strong{font-size:clamp(27px,8vw,35px)}.timer small{font-size:7px}
+.primary{font-size:11px;padding:12px 15px}
+}
+@media(max-width:370px){.hero{min-height:550px}.hero-content{padding:60px 15px 30px}.hero-title{font-size:75px!important}.timer strong{font-size:25px}}
