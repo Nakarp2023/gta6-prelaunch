@@ -229,3 +229,17 @@ body{background:#07080b}
 .extra-state{font:600 8px var(--font-body);letter-spacing:.08em;color:#ffffff55;white-space:nowrap;padding-top:4px}
 .club-heading-extra{margin-top:42px}
 @media(max-width:700px){.club-extra-grid{grid-template-columns:1fr;gap:8px}.club-extra{padding:14px;gap:12px}.extra-icon{flex-basis:36px;height:36px}.club-extra h4{font-size:18px}.extra-state{font-size:7px}}
+
+/* Dedicated Functions area — tools only, no profile or club content */
+.functions-section{max-width:1320px;margin:0 auto;padding:72px clamp(18px,4vw,52px) 90px}
+.functions-section h2{font:800 clamp(38px,7vw,72px) var(--font-display);letter-spacing:-.05em;color:#fff;margin:10px 0}
+.functions-section h2 em{font-style:normal;color:#ffffff55}
+.functions-lead{color:#a8a8b2;font-size:13px;margin:0 0 30px}
+.functions-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.function-card{padding:24px;border:1px solid #ffffff17;background:linear-gradient(145deg,#111219,#090a0d);min-width:0}
+.function-card>span{font:600 8px var(--font-body);letter-spacing:.16em;color:#ffffff55}
+.function-card h3{font:700 24px var(--font-display);color:#fff;margin:16px 0 8px}
+.function-card p{font-size:12px;line-height:1.65;color:#a5a5b0;min-height:40px;margin:0 0 20px}
+.function-card button,.function-card a{display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 14px;border:1px solid #ffffff25;background:#ffffff05;color:#fff;text-decoration:none;font:600 10px var(--font-body);letter-spacing:.08em;cursor:pointer}
+.function-card button:hover,.function-card a:hover{background:#ffffff12;border-color:#ffffff50}
+@media(max-width:700px){.functions-section{padding:42px 16px 70px}.functions-section h2{font-size:42px}.functions-lead{font-size:11px}.functions-grid{grid-template-columns:1fr;gap:9px}.function-card{padding:18px}.function-card h3{font-size:22px}.function-card p{min-height:0;margin-bottom:16px}}
