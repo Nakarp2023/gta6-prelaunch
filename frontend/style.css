@@ -113,3 +113,17 @@ body[data-screen="world"] #places .section-head,body[data-screen="gallery"] #gal
 .countdown-section .release{display:flex;align-items:center;justify-content:center;margin:0;gap:14px}
 .countdown-section .timer{width:min(460px,100%);margin:0}
 @media(max-width:700px){.countdown-section{padding:22px 16px 30px;gap:9px}.countdown-section .timer{margin:0}}
+
+
+/* Refined hero hierarchy and raised countdown */
+.hero{min-height:620px}
+.hero-content{padding-top:72px;padding-bottom:44px}
+.hero-eyebrow{margin:0 0 17px;font:600 10px var(--font-body);letter-spacing:.28em;color:#ffffffa8}
+.hero-eyebrow i{font-style:normal;color:#ffffff55;padding:0 7px}
+.official-link{display:inline-flex;align-items:center;gap:12px;margin-top:4px;padding:11px 14px;border:1px solid #ffffff45;border-radius:4px;background:#ffffff0a;color:#ffffffd9;font:600 10px var(--font-body);letter-spacing:.14em;text-decoration:none;backdrop-filter:blur(8px);transition:background .2s,border-color .2s,transform .2s}
+.official-link span{font-size:14px;color:#fff}
+.official-link:hover{background:#ffffff18;border-color:#ffffff90;transform:translateY(-1px)}
+.countdown-section{padding:16px 20px 28px;gap:8px}
+.countdown-section .release{gap:12px}
+@media(max-width:700px){.hero{min-height:520px}.hero-content{padding:58px 20px 34px}.hero-eyebrow{font-size:8px;letter-spacing:.2em;margin-bottom:14px}.official-link{font-size:9px;padding:10px 12px}.countdown-section{padding:12px 16px 24px}}
+@media(max-width:370px){.hero{min-height:490px}}
