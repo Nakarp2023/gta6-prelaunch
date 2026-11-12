@@ -10,3 +10,22 @@
 .section-head.in-view,.tiles.in-view,.feature-section.in-view,.places-section.in-view,.gallery-section.in-view,.profile.in-view,.news.in-view{opacity:1;transform:translateY(0)}
 .tiles.in-view .tile:nth-child(2){transition-delay:.08s}.tiles.in-view .tile:nth-child(3){transition-delay:.16s}.gallery-section.in-view .art-card:nth-child(2){transition-delay:.04s}.gallery-section.in-view .art-card:nth-child(3){transition-delay:.08s}.gallery-section.in-view .art-card:nth-child(4){transition-delay:.12s}.gallery-section.in-view .art-card:nth-child(5){transition-delay:.16s}.gallery-section.in-view .art-card:nth-child(6){transition-delay:.2s}
 @media(prefers-reduced-motion:reduce){.section-head,.tiles,.feature-section,.places-section,.gallery-section,.profile,.news{opacity:1;transform:none}}
+
+/* Neon cinematic screen polish */
+:root{--pink:#ff3e9d;--pink2:#ff9bd0;--cyan:#62f5ff;--glow:0 0 35px #ff3e9d28}
+body{background:radial-gradient(ellipse at 75% -10%,#35102b 0,transparent 38%),radial-gradient(ellipse at 0 45%,#101b2b 0,transparent 32%),#07070b}
+.topbar{border-bottom:1px solid #ff5aa615;margin-bottom:14px}.brand{text-shadow:0 0 18px #ff3e9d45}.badge{border-color:#ff5aa633;color:#ffb3d7;box-shadow:inset 0 0 12px #ff3e9d0b}
+.hero{border:1px solid #ff5aa62b;box-shadow:0 25px 90px #ff3e9d12,0 0 0 1px #ffffff05 inset}.hero:after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(ellipse at 80% 20%,#ff3e9d20,transparent 45%),linear-gradient(130deg,transparent 55%,#62f5ff08);z-index:0}.hero h1 em{text-shadow:0 0 24px #ff3e9d66,0 0 70px #ff3e9d30}.hero h1 span{text-shadow:0 0 28px #62f5ff55}.primary{box-shadow:0 0 25px #ff3e9d38,inset 0 1px #ffffff40}.section-head h2,.feature-copy h2,.profile h2,.news h2{ text-shadow:0 0 22px #ff3e9d18}
+.tile,.place-card,.art-card,.feature-section,.profile,.news{border:1px solid #ff5aa61a;box-shadow:0 10px 35px #0003}.tile:hover,.place-card:hover,.art-card:hover{box-shadow:0 15px 45px #ff3e9d12,0 0 25px #ff3e9d0c}.art-card span{background:linear-gradient(90deg,#ff3e9d10,transparent);text-shadow:0 0 12px #ff3e9d20}
+.bottom-nav{background:linear-gradient(135deg,#1b111eeF,#10131beF);border-color:#ff5aa635;box-shadow:0 10px 45px #0009,0 0 25px #ff3e9d12}.nav-item.active{color:#ff7fbe;text-shadow:0 0 18px #ff3e9d65}.nav-item.active small{color:#ffc0df}
+/* True in-app screens */
+body[data-screen="home"] #places,body[data-screen="home"] #gallery,body[data-screen="home"] #profile,body[data-screen="home"] #news{display:none}
+body[data-screen="world"] .hero,body[data-screen="world"] #media,body[data-screen="world"] #world,body[data-screen="world"] #characters,body[data-screen="world"] #gallery,body[data-screen="world"] #profile,body[data-screen="world"] #news{display:none}
+body[data-screen="gallery"] .hero,body[data-screen="gallery"] #media,body[data-screen="gallery"] #world,body[data-screen="gallery"] #characters,body[data-screen="gallery"] #places,body[data-screen="gallery"] #profile,body[data-screen="gallery"] #news{display:none}
+body[data-screen="news"] .hero,body[data-screen="news"] #media,body[data-screen="news"] #world,body[data-screen="news"] #characters,body[data-screen="news"] #places,body[data-screen="news"] #gallery,body[data-screen="news"] #profile{display:none}
+body[data-screen="profile"] .hero,body[data-screen="profile"] #media,body[data-screen="profile"] #world,body[data-screen="profile"] #characters,body[data-screen="profile"] #places,body[data-screen="profile"] #gallery,body[data-screen="profile"] #news{display:none}
+body[data-screen]:not([data-screen="home"]) main{min-height:calc(100dvh - 160px);animation:screenEnter .45s cubic-bezier(.2,.75,.25,1)}
+body[data-screen="world"] #places,body[data-screen="gallery"] #gallery,body[data-screen="news"] #news,body[data-screen="profile"] #profile{padding-top:22px}
+body[data-screen="world"] #places .section-head,body[data-screen="gallery"] #gallery .section-head{margin-top:12px}
+@keyframes screenEnter{from{opacity:.45;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){.topbar{height:60px}.hero{box-shadow:0 18px 55px #ff3e9d0b}.bottom-nav{box-shadow:0 8px 35px #000b,0 0 18px #ff3e9d12}}
