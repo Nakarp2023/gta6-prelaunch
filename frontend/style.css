@@ -106,3 +106,10 @@ body[data-screen="world"] #places .section-head,body[data-screen="gallery"] #gal
 .primary{font-size:11px;padding:12px 15px}
 }
 @media(max-width:370px){.hero{min-height:550px}.hero-content{padding:60px 15px 30px}.hero-title{font-size:75px!important}.timer strong{font-size:25px}}
+
+
+/* Countdown lives below the hero artwork, never on top of it */
+.countdown-section{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:30px 20px 38px;margin:0 auto;max-width:760px;text-align:center}
+.countdown-section .release{display:flex;align-items:center;justify-content:center;margin:0;gap:14px}
+.countdown-section .timer{width:min(460px,100%);margin:0}
+@media(max-width:700px){.countdown-section{padding:22px 16px 30px;gap:9px}.countdown-section .timer{margin:0}}
