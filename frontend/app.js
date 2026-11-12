@@ -1,12 +1,6 @@
-const target = new Date("2026-11-19T00:00:00");
-function tick() {
-  const n = Math.max(0, target - Date.now());
-  const d = Math.floor(n / 86400000), h = Math.floor(n / 3600000) % 24, m = Math.floor(n / 60000) % 60, s = Math.floor(n / 1000) % 60;
-  [["d",d],["h",h],["m",m],["s",s]].forEach(([id,v]) => document.getElementById(id).textContent = String(v).padStart(2,"0"));
-}
-tick(); setInterval(tick, 1000);
-const tg = window.Telegram?.WebApp;
-if (tg) { tg.ready(); tg.expand(); if (tg.initDataUnsafe?.user) { const u=tg.initDataUnsafe.user; document.getElementById("tg-user").textContent=`Привет, ${u.first_name || "игрок"}!`; } }
-const key="gta6-platform";
-document.getElementById("platform").value=localStorage.getItem(key)||"PlayStation 5";
-document.getElementById("save").onclick=()=>{localStorage.setItem(key,document.getElementById("platform").value);document.getElementById("save").textContent="Сохранено ✓";};
+const releaseAt=new Date("2026-11-19T00:00:00+03:00");
+function countdown(){let ms=Math.max(0,releaseAt-Date.now());const vals={d:Math.floor(ms/86400000),h:Math.floor(ms/3600000)%24,m:Math.floor(ms/60000)%60,s:Math.floor(ms/1000)%60};for(const [id,v] of Object.entries(vals)){const el=document.getElementById(id);if(el)el.textContent=String(v).padStart(2,"0");}const label=document.getElementById("count-label");if(label&&ms===0)label.textContent="ИГРА УЖЕ ВЫШЛА";}
+countdown();setInterval(countdown,1000);
+const tg=window.Telegram?.WebApp;if(tg){tg.ready();tg.expand();const u=tg.initDataUnsafe?.user;if(u){document.getElementById("tg-user").textContent="Привет, "+(u.first_name||"игрок")+"!";}}
+const platform=document.getElementById("platform"),save=document.getElementById("save"),key="gta6-platform";platform.value=localStorage.getItem(key)||"PlayStation 5";save.onclick=()=>{localStorage.setItem(key,platform.value);save.textContent="Сохранено ✓";};
+document.querySelectorAll(".nav-item").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".nav-item").forEach(x=>x.classList.remove("active"));btn.classList.add("active");const id=btn.dataset.go;document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"});}));
