@@ -269,3 +269,6 @@ body{background:#07080b}
 
 /* Inline trailer player */
 .trailer-feature{position:relative}.trailer-feature.playing .trailer-play{display:none}.trailer-inline-player{display:none;position:relative;width:100%;aspect-ratio:16/9;background:#000;border:1px solid #d8b46a35;overflow:hidden}.trailer-inline-player.open{display:block;animation:contentIn .35s var(--ease) both}.trailer-inline-player iframe{display:block;width:100%;height:100%;border:0}.inline-video-close{position:absolute;right:12px;top:12px;background:#08090dcc;border:1px solid #d8b46a55;border-radius:3px;padding:9px 12px;color:#e9c477;font:700 9px var(--font-body);letter-spacing:.12em}.trailer-feature.playing{box-shadow:0 0 0 1px #d8b46a25}
+
+/* Gallery random artwork action */
+.gallery-random{background:transparent;border:1px solid #d8b46a45;color:#d9b56f;border-radius:3px;padding:10px 12px;font:700 9px var(--font-body);letter-spacing:.12em;white-space:nowrap}.gallery-random:hover{background:#d8b46a12;border-color:#d8b46a80}
