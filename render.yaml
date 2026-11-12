@@ -1,0 +1,26 @@
+services:
+  - type: static
+    name: gta6-miniapp
+    rootDir: frontend
+    buildCommand: ""
+    staticPublishPath: .
+  - type: web
+    name: gta6-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+  - type: worker
+    name: gta6-bot
+    runtime: python
+    rootDir: bot
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: WEBAPP_URL
+        value: https://gta6-miniapp.onrender.com
