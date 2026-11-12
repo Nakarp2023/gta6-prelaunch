@@ -272,3 +272,6 @@ body{background:#07080b}
 
 /* Gallery random artwork action */
 .gallery-random{background:transparent;border:1px solid #d8b46a45;color:#d9b56f;border-radius:3px;padding:10px 12px;font:700 9px var(--font-body);letter-spacing:.12em;white-space:nowrap}.gallery-random:hover{background:#d8b46a12;border-color:#d8b46a80}
+
+/* Keep the release countdown clear of the floating bottom navigation */
+@media(max-width:700px){.countdown-section{padding-top:6px;padding-bottom:44px;transform:translateY(-10px)}.countdown-section .timer{margin-bottom:0}}
