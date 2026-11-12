@@ -20,7 +20,8 @@ function switchScreen(name){if(!["home","world","gallery","functions","club","ne
 document.querySelectorAll(".nav-item").forEach(btn=>btn.addEventListener("click",()=>switchScreen(btn.dataset.go)));
 document.querySelectorAll('a[href="#places"]').forEach(a=>a.addEventListener("click",e=>{e.preventDefault();switchScreen("world");}));
 document.querySelectorAll('a[href="#gallery"]').forEach(a=>a.addEventListener("click",e=>{e.preventDefault();switchScreen("gallery");}));
-document.querySelectorAll('a[href="#characters"]').forEach(a=>a.addEventListener("click",e=>{e.preventDefault();switchScreen("world");}));
+
+document.getElementById("random-art")?.addEventListener("click",()=>{if(cards.length)openArt(Math.floor(Math.random()*cards.length));});
 switchScreen("home");
 const navItems=[...document.querySelectorAll(".nav-item")],targets=[];
 if("IntersectionObserver"in window){const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in-view");reveal.unobserve(e.target);}}),{threshold:.12});document.querySelectorAll(".section-head,.tiles,.feature-section,.places-section,.gallery-section,.profile,.news,.functions-section,.club-section").forEach(el=>reveal.observe(el));const spy=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){const id=e.target.id;navItems.forEach(n=>n.classList.toggle("active",n.dataset.go===id||(id==="places"&&n.dataset.go==="world")||(id==="characters"&&n.dataset.go==="world")));}}),{rootMargin:"-35% 0px -55% 0px"});document.querySelectorAll("#home,#world,#gallery,#news,#functions,#club,#profile").forEach(t=>spy.observe(t));}
