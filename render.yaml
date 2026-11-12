@@ -1,5 +1,6 @@
 services:
-  - type: staticSite
+  - type: web
+    runtime: static
     name: gta6-miniapp
     rootDir: frontend
     buildCommand: ""
@@ -10,6 +11,7 @@ services:
     rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    plan: free
     envVars:
       - key: TELEGRAM_BOT_TOKEN
         sync: false
@@ -19,6 +21,7 @@ services:
     rootDir: bot
     buildCommand: pip install -r requirements.txt
     startCommand: python main.py
+    plan: free
     envVars:
       - key: TELEGRAM_BOT_TOKEN
         sync: false
