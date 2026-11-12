@@ -305,3 +305,22 @@ body{background:#07080b}
 @media(max-width:700px){.hero{min-height:590px!important}.hero-content{min-height:590px;padding:54px 6% 30px!important;display:flex;flex-direction:column;align-items:flex-start}.hero .preorder-trigger{margin-top:auto;margin-bottom:24px;width:100%;justify-content:center;padding:17px 20px;border-radius:10px;box-shadow:0 10px 32px #ff32944a,0 0 0 1px #ffb5d833;letter-spacing:.06em;font-weight:900}.global-order-cta{bottom:calc(91px + env(safe-area-inset-bottom));padding:10px 11px 10px 14px;border-radius:12px}.global-order-cta strong{font-size:12px}.global-order-cta button{padding:13px 14px;font-size:9px}.preorder-bottom-cta{bottom:calc(155px + env(safe-area-inset-bottom))!important}}
 
 @media(max-width:700px){.hero{min-height:500px!important}.hero-content{min-height:500px!important;padding-top:42px!important;padding-bottom:26px!important}.countdown-section{position:relative;z-index:4;margin-top:-42px!important;padding:0 10px 28px!important;transform:none!important}.countdown-section .release{margin:0 0 10px!important;padding:10px 14px;border:1px solid #ffffff30;border-radius:12px;background:linear-gradient(135deg,#ffffff18,#ffffff06);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 12px 35px #0004}.countdown-section .timer{padding:14px 8px;border:1px solid #ffffff35;border-radius:16px;background:linear-gradient(135deg,#ffffff20,#ffffff08 55%,#ff4f9f0b);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%);box-shadow:inset 0 1px 0 #ffffff25,0 18px 45px #0005;position:relative;overflow:hidden}.countdown-section .timer:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,#ffffff18,transparent 35%,#ff4f9f0b 75%,transparent)}.countdown-section .timer>div{position:relative;z-index:1}.countdown-section .timer strong{text-shadow:0 0 18px #ff6ab544}.countdown-section .timer small{color:#d8cbd9;letter-spacing:.12em}}
+
+
+/* Harmonized mobile hero, countdown and single persistent pink CTA */
+@media(max-width:700px){
+ .hero{min-height:520px!important}
+ .hero-content{min-height:520px!important;padding:38px 6% 34px!important}
+ .hero-title{margin-top:12px}
+ .countdown-section{margin-top:-24px!important;padding:0 12px 28px!important}
+ .countdown-section .release{margin-bottom:12px!important}
+ .countdown-section .timer{padding:18px 8px}
+ .global-order-cta{
+   bottom:calc(91px + env(safe-area-inset-bottom));
+   background:linear-gradient(115deg,rgba(27,17,29,.82),rgba(13,12,18,.76));
+   border:1px solid rgba(255,105,179,.42);
+   box-shadow:0 12px 34px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.08);
+   backdrop-filter:blur(24px) saturate(145%);-webkit-backdrop-filter:blur(24px) saturate(145%);
+ }
+ .global-order-cta button{background:linear-gradient(115deg,#ff3294,#ff69b3);box-shadow:0 6px 20px #ff329444}
+}
