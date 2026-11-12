@@ -275,3 +275,16 @@ body{background:#07080b}
 
 /* Keep the release countdown clear of the floating bottom navigation */
 @media(max-width:700px){.countdown-section{padding-top:6px;padding-bottom:44px;transform:translateY(-10px)}.countdown-section .timer{margin-bottom:0}}
+
+/* Mobile home: shorten hero so countdown stays above fixed HUD navigation */
+@media(max-width:700px){.hero{min-height:420px!important}.hero-content{padding-top:44px!important;padding-bottom:26px!important}.hero-location{margin:14px 0 22px!important}.countdown-section{padding-top:8px!important;padding-bottom:38px!important;transform:translateY(-22px)!important}}
+/* Rockstar official collection cards */
+.world-media-links,.gallery-collections{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:24px 0 12px}
+.world-media-links a,.gallery-collections a{display:flex;flex-direction:column;gap:12px;min-width:0;padding:18px;border:1px solid #d8b46a25;background:linear-gradient(135deg,#ffffff05,#d8b46a06);color:#eee;text-decoration:none;transition:border-color .2s,background .2s}
+.world-media-links a:hover,.gallery-collections a:hover{border-color:#d8b46a75;background:#d8b46a0d}
+.world-media-links a{font:700 11px var(--font-body);letter-spacing:.08em}
+.world-media-links span{color:#d8b46a}
+.gallery-collections a span{font:600 8px var(--font-body);letter-spacing:.16em;color:#d8b46a}
+.gallery-collections a b{font:700 21px var(--font-display);line-height:1.1;color:#fff}
+.gallery-collections a i{font:600 9px var(--font-body);font-style:normal;color:#ffffff70;margin-top:auto}
+@media(max-width:700px){.world-media-links,.gallery-collections{grid-template-columns:1fr;gap:8px}.world-media-links a,.gallery-collections a{padding:15px}.gallery-collections a b{font-size:19px}}
