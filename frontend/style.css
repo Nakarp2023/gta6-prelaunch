@@ -243,3 +243,10 @@ body{background:#07080b}
 .function-card button,.function-card a{display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 14px;border:1px solid #ffffff25;background:#ffffff05;color:#fff;text-decoration:none;font:600 10px var(--font-body);letter-spacing:.08em;cursor:pointer}
 .function-card button:hover,.function-card a:hover{background:#ffffff12;border-color:#ffffff50}
 @media(max-width:700px){.functions-section{padding:42px 16px 70px}.functions-section h2{font-size:42px}.functions-lead{font-size:11px}.functions-grid{grid-template-columns:1fr;gap:9px}.function-card{padding:18px}.function-card h3{font-size:22px}.function-card p{min-height:0;margin-bottom:16px}}
+
+/* Navigation: compact six destinations, consistent touch targets */
+.bottom-nav{display:flex;justify-content:space-around;gap:2px;padding:8px 5px calc(8px + env(safe-area-inset-bottom));}
+.nav-item{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:8px 1px;border-radius:12px;font-size:17px}
+.nav-item small{font-size:9px;letter-spacing:0;text-transform:none;white-space:nowrap}
+.nav-item.active{background:#ffffff10;color:#fff}
+@media(max-width:390px){.nav-item small{font-size:8px}.nav-item{gap:3px;padding:7px 0}}
