@@ -190,3 +190,34 @@ body{background:#07080b}
 .gallery-grid{gap:9px}
 .art-card span{padding-top:8px;font-size:8px}
 }
+
+/* GTA VI Club storefront */
+.club-section{max-width:1320px;margin:0 auto;padding:72px clamp(18px,4vw,52px) 90px}
+.club-hero{position:relative;overflow:hidden;min-height:290px;padding:clamp(28px,6vw,72px);display:flex;flex-direction:column;justify-content:center;background:linear-gradient(105deg,#11131be8,#10111a80 60%,#090a0d),radial-gradient(ellipse at 85% 25%,#ff3e9d30,transparent 55%);border:1px solid #ffffff18}
+.club-hero:after{content:"";position:absolute;width:360px;height:360px;border:1px solid #ffffff0c;border-radius:50%;right:-80px;top:-80px;box-shadow:0 0 0 50px #ffffff04,0 0 0 100px #ffffff03}
+.club-hero h2{font:900 clamp(56px,11vw,120px)/.85 var(--font-display);letter-spacing:-.07em;margin:18px 0;color:#fff}
+.club-hero h2 em{font-style:normal;color:#ffffff58}
+.club-hero p{color:#b8b7c1;font-size:13px;letter-spacing:.04em;margin:18px 0 0}
+.club-mark{position:absolute;right:clamp(24px,7vw,90px);bottom:24px;font:900 100px var(--font-display);letter-spacing:-.1em;color:#ffffff09}
+.club-heading{display:flex;align-items:end;justify-content:space-between;margin:45px 0 20px}
+.club-heading h3{font:700 clamp(25px,4vw,38px) var(--font-display);margin:7px 0 0;color:#fff}
+.club-status{font:600 8px var(--font-body);letter-spacing:.18em;border:1px solid #ffffff24;padding:8px 10px;color:#ffffff75}
+.club-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.club-card{border:1px solid #ffffff14;background:#0d0e14;min-width:0;transition:border-color .25s,transform .25s}
+.club-card:hover{border-color:#ffffff35;transform:translateY(-3px)}
+.club-art{height:clamp(140px,23vw,270px);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at 50% 70%,#ff3e9d22,transparent 55%),linear-gradient(135deg,#18151d,#090a0e)}
+.club-wall .club-art{background:radial-gradient(ellipse at 50% 70%,#62f5ff20,transparent 55%),linear-gradient(135deg,#111b20,#090a0e)}
+.club-style .club-art{background:radial-gradient(ellipse at 50% 70%,#c7a4ff20,transparent 55%),linear-gradient(135deg,#191521,#090a0e)}
+.club-support .club-art{background:radial-gradient(ellipse at 50% 70%,#ffad6020,transparent 55%),linear-gradient(135deg,#1b1713,#090a0e)}
+.club-symbol{font-size:clamp(48px,8vw,92px);color:#ffffffb0;text-shadow:0 0 45px #ffffff22}
+.club-label{position:absolute;left:17px;top:16px;font:600 8px var(--font-body);letter-spacing:.17em;color:#ffffff60}
+.club-card-copy{padding:20px}
+.club-card h4{font:800 clamp(20px,3vw,29px) var(--font-display);letter-spacing:.03em;color:#fff;margin:0 0 8px}
+.club-card p{font-size:12px;line-height:1.65;color:#a6a6b2;min-height:40px;margin:0 0 18px}
+.club-action{width:100%;display:flex;justify-content:space-between;align-items:center;padding:12px 13px;background:#ffffff06;border:1px solid #ffffff20;color:#ffffff9a;font:600 10px var(--font-body);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.club-action span{font-size:15px;color:#fff}
+.club-action:hover{background:#ffffff0d;border-color:#ffffff45;color:#fff}
+.club-footnote{display:flex;align-items:center;gap:12px;margin-top:24px;padding:16px;border:1px solid #ffffff10;background:#ffffff03}
+.club-footnote>span{color:#ffffff75;font-size:16px}.club-footnote p{font-size:10px;line-height:1.6;color:#ffffff55;margin:0}
+@media(max-width:700px){.club-section{padding:40px 16px 70px}.club-hero{min-height:230px;padding:25px}.club-hero h2{font-size:clamp(52px,15vw,85px)}.club-hero p{font-size:11px;max-width:220px}.club-mark{font-size:70px;right:20px;bottom:15px}.club-heading{margin:30px 0 15px}.club-grid{gap:9px}.club-art{height:145px}.club-card-copy{padding:13px}.club-card h4{font-size:21px}.club-card p{font-size:10px;min-height:56px;margin-bottom:12px}.club-action{padding:10px;font-size:9px}.club-label{font-size:7px;left:10px;top:11px}}
+@media(max-width:370px){.club-grid{grid-template-columns:1fr}.club-art{height:180px}.club-card p{min-height:0}}
